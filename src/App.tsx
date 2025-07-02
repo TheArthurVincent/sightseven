@@ -1,5 +1,4 @@
-import React, { 
-  useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { UserProvider } from "./Application/SelectLanguage/SelectLanguage";
 import AppFooter from "./Routes/Footer/Footer";
@@ -7,47 +6,13 @@ import { LogoSVG } from "./Resources/UniversalComponents";
 import { primaryColor, secondaryColor } from "./Styles/Styles";
 
 function App() {
-  const myLogo = LogoSVG(primaryColor(), secondaryColor(), 4);
-
-  const videos = [
-    {
-      title: "🃏 Flashcards",
-      description: "Memorize vocabulário com técnica de repetição espaçada.",
-      url: "https://www.youtube.com/embed/bobVcB0crX4",
-    },
-    {
-      title: "🎧 Listening",
-      description:
-        "Melhore sua compreensão auditiva com conteúdos adaptados ao seu nível.",
-      url: "https://www.youtube.com/embed/4wFkC5XOytI",
-    },
-    {
-      title: "📚 Conteúdo Completo",
-      description:
-        "Acesse cursos organizados do nível básico ao avançado. Aprenda gramática, vocabulário, leitura, escuta e conversação com métodos práticos, objetivos e eficientes.",
-      url: "https://www.youtube.com/embed/Bz7c-kT6tyE",
-    },
-    {
-      title: "🗣️ Clube de Conversação",
-      description:
-        "Participe de encontros ao vivo para praticar o inglês com outros alunos e professores.",
-      url: "https://www.youtube.com/embed/g4YGm9G9SUw",
-    },
-
-    {
-      title: "🧠 Sentence Mining",
-      description:
-        "Aprenda vocabulário e gramática a partir de frases reais e úteis.",
-      url: "https://www.youtube.com/embed/a3IOJN_n5VI",
-    },
-  ];
-  const [selectedVideo, setSelectedVideo] = useState<any>(null);
-
   const routes = [
     {
       path: "/*",
       element: (
+        // ...existing code...
         <div className="container">
+          {/* HERO */}
           <section className="hero-section thesection-1">
             <div className="hero-grid">
               <div
@@ -61,145 +26,161 @@ function App() {
                 }}
                 className="hero-text"
               >
-                {myLogo}
-                <p className="hero-subtitle">
-                  Você precisa aprender inglês! <br />
-                  Você quer aprender inglês! <br />
-                  Você vai aprender inglês!
+                <img
+                  src="https://ik.imagekit.io/vjz75qw96/assets/icons/sight.png"
+                  alt="Sight 7 Logo"
+                  style={{ maxWidth: 180, marginBottom: 16 }}
+                />
+                <h1
+                  className="hero-title"
+                  style={{
+                    fontWeight: 700,
+                    fontSize: "2.2rem",
+                    marginBottom: 8,
+                  }}
+                >
+                  Visão além dos dados.
+                </h1>
+                <p
+                  className="hero-subtitle"
+                  style={{ fontSize: "1.2rem", color: "#3A4A6C" }}
+                >
+                  Transforme dados em decisões inteligentes.
+                  <br />
+                  Otimize fluxos, aumente vendas e entenda o comportamento do
+                  seu cliente com clareza e precisão.
                 </p>
                 <a
-                  style={{ backgroundColor: secondaryColor() }}
+                  style={{
+                    backgroundColor: "#1B2A4D", // Azul-escuro
+                    color: "#fff",
+                    marginTop: 18,
+                    fontWeight: 600,
+                    letterSpacing: 1,
+                  }}
                   target="_blank"
-                  href="https://portal.arthurvincent.com.br/signup"
+                  href="https://sight7.com.br/contato"
                   className="cta-button"
                 >
-                  Quero, preciso e vou aprender inglês!
+                  Solicite uma demonstração
                 </a>
               </div>
+            </div>
+          </section>
 
-              <div className="hero-image">
-                <img
-                  src="https://ik.imagekit.io/vjz75qw96/assets/icons/eu?updatedAt=1749480447421"
-                  alt="Arthur"
-                />
+          {/* MISSÃO, VISÃO, VALORES */}
+          <section className="benefits-section thesection-2">
+            <h2 className="section-title">Missão, Visão e Valores</h2>
+            <div className="benefits-cards">
+              <div className="benefit-card">
+                <h3>Missão</h3>
+                <p>
+                  Transformar dados em decisões inteligentes, ajudando empresas
+                  a otimizarem seus fluxos e aumentarem vendas com análise de
+                  comportamento do cliente.
+                </p>
+              </div>
+              <div className="benefit-card">
+                <h3>Visão</h3>
+                <p>
+                  Ser referência global em soluções de inteligência de dados que
+                  conectam marcas aos seus clientes com clareza e precisão.
+                </p>
+              </div>
+              <div className="benefit-card">
+                <h3>Valores</h3>
+                <ul style={{ paddingLeft: 18 }}>
+                  <li>
+                    <b>Clareza</b> – traduzimos dados complexos em ações
+                    simples.
+                  </li>
+                  <li>
+                    <b>Inovação</b> – usamos tecnologia de ponta com propósito.
+                  </li>
+                  <li>
+                    <b>Precisão</b> – análises baseadas em dados reais e
+                    resultados mensuráveis.
+                  </li>
+                  <li>
+                    <b>Parceria</b> – crescemos junto com nossos clientes.
+                  </li>
+                  <li>
+                    <b>Ética</b> – tratamos os dados com responsabilidade e
+                    respeito.
+                  </li>
+                </ul>
               </div>
             </div>
           </section>
 
-          {/* Benefícios */}
-          <section className="benefits-section thesection-2">
-            <h2 className="section-title">
-              Por que aprender em minha plataforma?
-            </h2>
-            <div className="benefits-cards">
-              {videos.map((video: any, index: any) => (
-                <div
-                  key={index}
-                  className="benefit-card"
-                  onClick={() => setSelectedVideo(video)}
-                  style={{ cursor: "pointer" }}
-                >
-                  <h3>{video.title}</h3>
-                  <p>{video.description}</p>
-                </div>
-              ))}
-
-              {selectedVideo && (
-                <div
-                  className="modal-overlay"
-                  onClick={() => setSelectedVideo(null)}
-                >
-                  <div
-                    className="modal-content"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <iframe
-                      width="100%"
-                      height="315"
-                      src={selectedVideo.url}
-                      title="YouTube video player"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
-                    <button
-                      className="close-button"
-                      onClick={() => setSelectedVideo(null)}
-                    >
-                      Fechar
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
-          </section>
+          {/* SOBRE A SIGHT 7 */}
           <section className="hero-section thesection-1 padding-yes">
-            <h2 className="section-title">🎥 Tudo sobre a plataforma!</h2>
+            <h2 className="section-title">Sobre a Sight 7</h2>
             <div
               style={{
-                position: "relative",
-                paddingBottom: "56.25%", // 16:9 aspect ratio
-                paddingTop: "25px",
-                height: 0,
-                maxWidth: "960px",
+                maxWidth: "700px",
                 margin: "0 auto",
-                borderRadius: "12px",
-                overflow: "hidden",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+                fontSize: "1.1rem",
+                color: "#3A4A6C",
+                textAlign: "center",
+                lineHeight: 1.6,
               }}
             >
-              <iframe
-                src="https://www.youtube.com/embed/qUiHhLsyiIw"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                }}
-              />
+              <p>
+                A Sight 7 oferece soluções inteligentes de análise de dados e
+                monitoramento para empresas que buscam clareza, segurança e
+                resultados. Combinamos tecnologia de ponta, visão estratégica e
+                atendimento consultivo para transformar dados em oportunidades
+                reais de crescimento.
+              </p>
             </div>
             <a
               style={{
                 textAlign: "center",
-                backgroundColor: secondaryColor(),
+                backgroundColor: "#7CF4A2", // Verde-limão/azul-claro para destaque
+                color: "#1B2A4D",
+                marginTop: 24,
+                fontWeight: 600,
               }}
               target="_blank"
-              href="https://portal.arthurvincent.com.br/signup"
+              href="https://sight7.com.br/contato"
               className="cta-button"
             >
-              Quero, preciso e vou aprender inglês!
+              Fale com um especialista
             </a>
           </section>
+
+          {/* DEPOIMENTOS OU CASES */}
           <section className="benefits-section thesection-2">
-            <h2 className="section-title">💬 Veja o que dizem os alunos</h2>
+            <h2 className="section-title">O que nossos clientes dizem</h2>
             <div className="testimonial-scroller">
-              {[
-                "https://www.youtube.com/embed/-eSmGb2CkPY",
-                "https://www.youtube.com/embed/X0T1y17ycN8",
-                "https://www.youtube.com/embed/hPnj2UgXZUU",
-                "https://www.youtube.com/embed/uLl_ak4AMOk",
-                "https://youtube.com/embed/rA9JWtcCDBc",
-              ].map((url, index) => (
-                <div className="testimonial-video" key={index}>
-                  <iframe
-                    src={url}
-                    title={`Depoimento ${index + 1}`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  />
-                </div>
-              ))}
+              {/* Substitua por vídeos ou depoimentos reais */}
+              <div className="testimonial-video">
+                <blockquote>
+                  “Com a Sight 7, conseguimos enxergar oportunidades que antes
+                  passavam despercebidas. A clareza dos relatórios fez toda a
+                  diferença para nosso negócio.”
+                  <br />
+                  <span style={{ fontWeight: 600 }}>
+                    — Cliente do setor varejista
+                  </span>
+                </blockquote>
+              </div>
+              <div className="testimonial-video">
+                <blockquote>
+                  “A equipe é consultiva e sempre traz soluções inovadoras.
+                  Recomendo para quem busca precisão e resultados mensuráveis.”
+                  <br />
+                  <span style={{ fontWeight: 600 }}>
+                    — Cliente do setor de serviços
+                  </span>
+                </blockquote>
+              </div>
             </div>
           </section>
           <AppFooter see={true} />
         </div>
+        // ...existing code...
       ),
     },
   ];

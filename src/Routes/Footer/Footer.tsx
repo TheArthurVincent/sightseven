@@ -27,14 +27,11 @@ export default function AppFooter({see}:AppFooterIn) {
         width: "100%",
       }}
     >
-      {myLogo}
-      <span>
-        This platform is powered by ARVIN ENGLISH SCHOOL © Some rights reserved{" "}
-        <br />
-        Arthur Vincent
-        <br />
-        +55 11 91585-7807
-      </span>
+        <img
+        src="https://ik.imagekit.io/vjz75qw96/assets/icons/sight.png"
+        alt="Sight 7 Logo"
+        style={{ maxWidth: 180, marginBottom: 16 }}
+      />  
     </footer>
   );
 }
