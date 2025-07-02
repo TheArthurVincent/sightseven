@@ -1,11 +1,4 @@
 import React from "react";
-import { LogoSVG } from "../Resources/UniversalComponents";
-import {
-  alwaysBlack,
-  alwaysWhite,
-  darkGreyColor,
-  mediumGreyColor,
-} from "../Styles/Styles";
 
 interface AppFooterIn {
   see: boolean;
@@ -17,8 +10,6 @@ export default function AppFooter({ see }: AppFooterIn) {
       style={{
         display: see ? "flex" : "none",
         fontSize: "12px",
-        backgroundColor: alwaysWhite(),
-        color: alwaysBlack(),
         alignItems: "center",
         justifyContent: "space-evenly",
         padding: "0.5rem",
