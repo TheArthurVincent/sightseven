@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "serve -s dist/",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "npx serve -s dist/"
   },
   "dependencies": {
     "@emotion/react": "^11.13.5",
@@ -35,7 +35,8 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.15.0",
     "react-toastify": "^11.0.5",
-    "server": "^1.0.38",
+    "serve": "^14.2.4",
+    "server": "^0.0.3",
     "socket": "^0.14.55",
     "socket.io-client": "^4.8.1",
     "styled-components": "^6.0.7",
