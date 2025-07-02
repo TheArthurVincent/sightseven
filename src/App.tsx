@@ -10,7 +10,7 @@ function App() {
             <img
               src="https://ik.imagekit.io/vjz75qw96/assets/icons/sight.png"
               alt="Sight 7 Logo"
-              style={{ maxWidth: 180, marginBottom: 16 }}
+              style={{ maxWidth: 240 }}
             />
             <h2
               className="hero-title"
