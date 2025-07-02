@@ -2,7 +2,7 @@
 
 body {
   background-size: cover;
-  background-image: url("https://ik.imagekit.io/vjz75qw96/assets/icons/bgbg?updatedAt=1751482994381");
+  background-image: url("https://ik.imagekit.io/vjz75qw96/assets/icons/camera?updatedAt=1751483318337");
   color: #000;
   font-family: "Roboto", "Poppins", Arial, sans-serif;
   background-attachment: fixed;
@@ -86,7 +86,6 @@ body {
   color: #fff;
 }
 
-/* --- BENEFITS --- */
 .benefits-section {
   padding: 60px 20px;
   text-align: center;
@@ -188,7 +187,6 @@ h4 {
 
 @media (max-width: 768px) {
   .benefits-cards {
-    flex-direction: column;
     gap: 16px;
   }
 

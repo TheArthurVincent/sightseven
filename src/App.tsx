@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { UserProvider } from "./Application/SelectLanguage/SelectLanguage";
 import AppFooter from "./Routes/Footer/Footer";
-import { LogoSVG } from "./Resources/UniversalComponents";
-import { primaryColor, secondaryColor } from "./Styles/Styles";
 
 function App() {
   const routes = [
@@ -12,18 +10,8 @@ function App() {
       element: (
         <div className="container">
           <section className="hero-section thesection-1">
-            <div className="hero-grid">
-              <div
-                style={{
-                  padding: "1rem",
-                  display: "grid",
-                  justifyContent: "right",
-                  alignContent: "center",
-                  alignItems: "center",
-                  justifyItems: "center",
-                }}
-                className="hero-text"
-              >
+            <div>
+              <div style={{ padding: "1rem" }}>
                 <img
                   src="https://ik.imagekit.io/vjz75qw96/assets/icons/sight.png"
                   alt="Sight 7 Logo"
@@ -49,6 +37,13 @@ function App() {
                   seu cliente com clareza e precisão.
                 </p>
                 <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const contato = document.getElementById("contato");
+                    if (contato) {
+                      contato.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                   style={{
                     backgroundColor: "#1B2A4D", // Azul-escuro
                     color: "#fff",
@@ -56,8 +51,7 @@ function App() {
                     fontWeight: 600,
                     letterSpacing: 1,
                   }}
-                  target="_blank"
-                  href="https://sight7.com.br/contato"
+                  href="#contato"
                   className="cta-button"
                 >
                   Solicite uma demonstração
@@ -109,6 +103,7 @@ function App() {
             </div>
           </section>
           <section
+            id="contato"
             className="hero-section thesection-1"
             style={{
               color: "#fff",
@@ -116,9 +111,7 @@ function App() {
               padding: "48px 20px",
             }}
           >
-            <h2 className="section-title">
-              Fale com a Sight 7 no WhatsApp
-            </h2>
+            <h2 className="section-title">Fale com a Sight 7 no WhatsApp</h2>
             <div
               style={{
                 maxWidth: "600px",
