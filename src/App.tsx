@@ -20,17 +20,19 @@ function App() {
                 marginBottom: 8,
               }}
             >
-              Visão além dos dados.
+              Veja além dos dados.
             </h2>
             <p
               className="hero-subtitle"
               style={{ fontSize: "1.2rem", color: "#3A4A6C" }}
             >
-              Transforme dados em decisões inteligentes.
+              Transformamos dados em informação útil — para você gastar menos,
+              vender mais e tomar decisões com confiança.
               <br />
-              Otimize fluxos, aumente vendas e entenda o comportamento do seu
-              cliente com clareza e precisão.
+              Entenda o comportamento do seu cliente com clareza e transforme
+              números em ação.
             </p>
+
             <a
               onClick={(e) => {
                 e.preventDefault();
@@ -60,37 +62,41 @@ function App() {
           <div className="benefit-card">
             <h3>Missão</h3>
             <p>
-              Transformar dados em decisões inteligentes, ajudando empresas a
-              otimizarem seus fluxos e aumentarem vendas com análise de
-              comportamento do cliente.
+              Ajudar empresas a enxergarem o que os dados sozinhos não mostram.
+              Transformamos informação em ação — com foco em economia,
+              eficiência e resultados reais.
             </p>
           </div>
+
           <div className="benefit-card">
             <h3>Visão</h3>
             <p>
-              Ser referência global em soluções de inteligência de dados que
-              conectam marcas aos seus clientes com clareza e precisão.
+              Ser referência em inteligência de dados aplicada. Queremos tornar
+              simples o que é complexo, conectando marcas e pessoas com clareza,
+              precisão e propósito.
             </p>
           </div>
+
           <div className="benefit-card">
             <h3>Valores</h3>
             <ul style={{ paddingLeft: 18 }}>
               <li>
-                <b>Clareza</b> – traduzimos dados complexos em ações simples.
+                <b>Clareza</b> – traduzimos dados em decisões fáceis de
+                entender.
               </li>
               <li>
-                <b>Inovação</b> – usamos tecnologia de ponta com propósito.
+                <b>Inovação</b> – tecnologia de ponta com foco no que importa.
               </li>
               <li>
-                <b>Precisão</b> – análises baseadas em dados reais e resultados
-                mensuráveis.
+                <b>Precisão</b> – tudo baseado em dados reais e impacto
+                mensurável.
               </li>
               <li>
-                <b>Parceria</b> – crescemos junto com nossos clientes.
+                <b>Parceria</b> – crescemos com quem confia na gente.
               </li>
               <li>
-                <b>Ética</b> – tratamos os dados com responsabilidade e
-                respeito.
+                <b>Ética</b> – tratamos os dados com o respeito que eles
+                merecem.
               </li>
             </ul>
           </div>
